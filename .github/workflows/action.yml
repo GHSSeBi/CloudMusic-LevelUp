@@ -33,7 +33,7 @@ jobs:
           WECOM_KEY: ${{ secrets.WECOM_KEY }}
           PUSH_PLUS_KEY: ${{ secrets.PUSH_PLUS_KEY }}
         run: |
-          if [ ${PASSWORD_PLAIN} ];then PASSWORD = PASSWORD_PLAIN; fi
+          if [ ${PASSWORD_PLAIN} ];then PASSWORD = ${PASSWORD_PLAIN}; fi
           if [ ${SC_KEY} ];then SC_CMD = "-s $SC_KEY"; fi
           if [ ${TG_BOT_KEY} ];then TG_BOT_CMD="-t TG_BOT_KEY"; fi
           if [ ${BARK_KEY} ];then BARK_CMD = "-b BARK_KEY"; fi
